@@ -19,6 +19,10 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0;
             padding: 0;
@@ -280,6 +284,19 @@
             margin: auto;
             background-color: #fcbf9e;
         }
+
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 10px;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
     </style>
 </head>
 
@@ -336,26 +353,42 @@
     </div>
 
     <main>
-        <!-- 圖片 -->
-        <div class="container-fluid mt-5">
-            <div class="row">
-                <div class="col-sm-4 mb-2 mt-4">
-                    <img src="image/door.jpg" alt="" class="d-block img-fluid">
-                </div>
-                <div class="col-sm-4 mb-2 mt-4">
-                    <img src="image/bed.jpg" alt="" class="d-block img-fluid">
-
-                </div>
-                <div class="col-sm-4 mt-4">
-                    <img src="image/nurse.jpg" alt="" class="d-block img-fluid">
-                </div>
-
+        <!-- 輪播圖 -->
+        <div id="carouselExampleIndicators" class="carousel slide mt-5" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
             </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="image/bed.jpg" class="d-block w-100" alt="..." style="height: 80vh;width: auto;">
+                </div>
+                <div class="carousel-item">
+                    <img src="image/nurse.jpg" class="d-block w-100" alt="..." style="height: 80vh;width: auto;">
+                </div>
+                <div class="carousel-item ">
+                    <img src="image/door.jpg" class="d-block" alt="..." style="height: 80vh;width: 100%;">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
         </div>
         <!-- <hr class="featurette-divider"> -->
 
         <!-- 關於安怡 -->
-        <div class="vh-75 mb-5 mt-2 background">
+        <div class="vh-75 pt-5 pb-5 mb-5 background">
             <div class="about" id="about">
                 <div class="row">
                     <div class="col-sm-7 text-center mb-4 mt-5">
@@ -375,7 +408,8 @@
                         </div>
                     </div>
                     <div class="col-sm-4 d-flex me-5 p-4" style="align-items:center">
-                        <img src="image/sofa.jpg" class="img-fluid" alt="">
+                        <img src="image/sofa.jpg" class="img-fluid" alt=""
+                            style="border-radius: 8px;box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);">
                     </div>
 
                 </div>
@@ -387,13 +421,13 @@
         <!-- 服務項目 item -->
         <div class="vh-75">
             <div class="item" id="item">
-                <div class="contact mb-5 mt-5 p-2" id="item">
-                    <h2 class="fw-bold mt-5 text-center">
+                <div class="contact mb-5 mt-3 p-2" id="item">
+                    <h2 class="fw-bold mt-3 text-center">
                         <img src="image/takecare.png" alt="" style="width: 40px;margin-right:10px">
                         服務項目
                     </h2>
                     <hr class="mx-auto" style="width: 35%; border-top: 2px solid #999;">
-                    <div class="container mt-3">
+                    <div class="container">
 
                         <table class="table table-hover text-center mt-5">
                             <thead>
@@ -466,9 +500,9 @@
         <!-- <hr class="featurette-divider"> -->
 
         <!-- 收費方式 fee -->
-        <div class="vh-75 background">
+        <div class="vh-75 background pt-3 pb-3">
             <div class="fee" id="fee">
-                <div class="contact mb-5 mt-5" id="fee">
+                <div class="contact pb-3 mt-3" id="fee">
                     <div class="row">
                         <!-- youtube -->
                         <div class="text-center mb-4">
@@ -522,10 +556,10 @@
         <!-- <hr class="featurette-divider"> -->
 
         <!-- 入住須知 intro-->
-        <div class="vh-75 mt-5 mb-5 mt-5">
+        <div class="vh-75 mt-5 mb-3 mt-3">
             <div class="intro" id="intro">
                 <div class="row">
-                    <div class="col-sm-12 text-center mb-4 mt-5">
+                    <div class="col-sm-12 text-center mt-3">
                         <h2 class="fw-bold">
                             <img src="image/home.png" alt="" style="width: 40px;margin-right:10px">
                             入住須知
@@ -592,7 +626,7 @@
         </div>
         <!-- <hr class="featurette-divider"> -->
         <!-- 聯絡我們 contact -->
-        <div class="vh-75 background pt-2">
+        <div class="vh-75 background pt-3">
             <div class="contact" id="contact">
                 <div class="text-center">
                     <h2 class="fw-bold mt-3">
