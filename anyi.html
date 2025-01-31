@@ -205,6 +205,12 @@
             display: none;
             /* 預設不顯示 */
         }
+
+        /* 為navbar設置漸變效果 */
+        .navbar {
+            transition: opacity 0.5s ease;
+            /* 設置透明度的漸變過程，0.5秒內平滑過渡 */
+        }
     </style>
 </head>
 
@@ -630,6 +636,27 @@
             // 當頁面滾動時，隱藏選單
             $(window).on('scroll', function () {
                 $('#navbarSupportedContent').removeClass('show');
+            });
+        });
+    </script>
+    <!-- 滾動時navbar變為透明度50% -->
+    <script>
+        $(document).ready(function () {
+            var scrollTimeout;  // 用來儲存 setTimeout
+
+            // 監聽滾動事件
+            $(window).scroll(function () {
+                // 滾動時將透明度設為 50%
+                $('.navbar').css('opacity', '0.5');
+
+                // 清除先前的 setTimeout 以防止誤判停止滾動
+                clearTimeout(scrollTimeout);
+
+                // 設置滾動停止後的行為
+                scrollTimeout = setTimeout(function () {
+                    // 停止滾動後將透明度恢復為 100%
+                    $('.navbar').css('opacity', '1');
+                }, 200);  // 200ms 沒有滾動則認為滾動停止
             });
         });
     </script>
