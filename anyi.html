@@ -315,7 +315,7 @@
                         <div class="mt-3">
                             <div class="row">
 
-                                <div class="col-sm-8">
+                                <div class="col-sm-8 p-2">
                                     <h4>服務對象：</h4>
                                     <p>鼻胃管、導尿管、氧氣、認知障礙(失智)、復健照護、透析照護(洗腎)、腫瘤照護(癌症)、精神照護</p>
                                 </div>
@@ -409,7 +409,7 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                                <div class="text-start">
+                                <div class="text-start p-2">
                                     <br>
                                     <p>※ 以上價格僅為「照護費」，不含保證金、衛耗材及其他衍生費用。</p>
                                     <p>※ 以上價格僅供參考，實際價格以住民與機構間簽訂之契約為據。</p>
@@ -433,7 +433,7 @@
                             入住須知
                         </h2>
                         <hr class="mx-auto" style="width: 15%; border-top: 2px solid #999;">
-                        <div class="">
+                        <div class="p-2">
                             <p>1.入住長照機構，須提供體檢報告，體檢項目請依各機構規定，體檢後約需七個工作天才能領取報告，敬請即早準備！
                             <p>2.參訪時，請攜帶病歷摘要或相關資料，讓機構可以評估參考。</p>
                             <p>3.參訪後，需經由機構進行評估，確認可以收住後，才會安排後續入住事宜。</p>
@@ -659,6 +659,17 @@
             // 點擊按鈕時，平滑滾動到頁面頂部
             $('#backToTopBtn').click(function () {
                 $('html, body').animate({ scrollTop: 0 }, 'smooth');
+            });
+        });
+    </script>
+
+    <!-- 漢堡選單點擊後自動收合 -->
+    <script>
+        // 使用 jQuery 讓選單項目被點擊後自動收合
+        $(document).ready(function () {
+            $('.navbar-nav .nav-link').on('click', function () {
+                // 使用 jQuery 隱藏選單
+                $('#navbarSupportedContent').collapse('hide');
             });
         });
     </script>
