@@ -15,6 +15,10 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             padding: 0;
@@ -240,6 +244,29 @@
                 font-size: 14px;
             }
         }
+
+        .callBox {
+            width: 40px;
+            height: 100px;
+            /* background-color: rgb(251, 160, 108); */
+            position: fixed;
+            right: 10px;
+            top: 70%;
+            display: flex;
+            flex-wrap: wrap;
+            z-index: 1000;
+        }
+
+        .callBox img {
+            transition: transform 0.3s ease;
+            /* 設置過渡效果，讓圖片放大時有平滑過渡 */
+            width: 100%;
+        }
+
+        .callBox img:hover {
+            transform: scale(1.5);
+            /* 當鼠標懸停時，圖片放大 1.2 倍 */
+        }
     </style>
 </head>
 
@@ -285,11 +312,6 @@
                             <a class="nav-link" aria-current="page" href="#contact">聯絡我們</a>
                         </li>
                     </ul>
-                    <a href="tel:0222287623" title="打電話">
-                        <img src="image/call.png" alt="" style="width: 35px;" class="me-3"></a>
-                    <a href="https://www.facebook.com/people/%E5%AE%89%E6%80%A1%E8%80%81%E4%BA%BA%E9%95%B7%E6%9C%9F%E7%85%A7%E9%A1%A7%E4%B8%AD%E5%BF%83/100066267172988/"
-                        title="安怡facebook">
-                        <img src="image/fb.png" alt="" style="width: 40px;" class="me-2"></a>
                 </div>
             </div>
         </nav>
@@ -587,6 +609,18 @@
             class="btn btn-light position-absolute bottom-0 end-0 translate-middle-y position-fixed border"
             id="backToTopBtn">回到最上方</button>
 
+        <!-- call button -->
+        <div class="callBox">
+            <div>
+                <a href="https://www.facebook.com/people/%E5%AE%89%E6%80%A1%E8%80%81%E4%BA%BA%E9%95%B7%E6%9C%9F%E7%85%A7%E9%A1%A7%E4%B8%AD%E5%BF%83/100066267172988/"
+                    title="安怡facebook">
+                    <img src="image/fb.png" alt="" style="width: 40px;" class="me-2"></a>
+            </div>
+            <div class="ms-1">
+                <a href="tel:0222287623" title="打電話">
+                    <img src="image/call.png" alt="" style="width: 35px;" class="me-3"></a>
+            </div>
+        </div>
         <!-- FOOTER -->
         <footer class="footer position-relative pt-0 ps-3 mx-0 pb-0 mb-0 pt-2"
             style="background-color:rgb(249, 142, 79)">
