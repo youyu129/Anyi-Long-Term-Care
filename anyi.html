@@ -245,27 +245,40 @@
             }
         }
 
-        .callBox {
+        /* 固定的電話按鈕 */
+        /* .callBox {
             width: 40px;
             height: 100px;
-            /* background-color: rgb(251, 160, 108); */
+            background-color: rgb(251, 160, 108);
             position: fixed;
             right: 10px;
             top: 40%;
             display: flex;
             flex-wrap: wrap;
             z-index: 1000;
-        }
+        } */
 
-        .callBox img {
+        /* 設置過渡效果，讓圖片放大時有平滑過渡 */
+        /* .callBox img {
             transition: transform 0.3s ease;
-            /* 設置過渡效果，讓圖片放大時有平滑過渡 */
             width: 100%;
+        } */
+
+        /* 當鼠標懸停時，圖片放大 1.2 倍 */
+        /* .callBox img:hover {
+            transform: scale(1.5);
+        } */
+
+        /* 有背景色的區域 */
+        .background {
+            background-color: #ffe8dc;
         }
 
-        .callBox img:hover {
-            transform: scale(1.5);
-            /* 當鼠標懸停時，圖片放大 1.2 倍 */
+        /* 收費表 */
+        .feeTable {
+            width: 60%;
+            margin: auto;
+            background-color: #fcbf9e;
         }
     </style>
 </head>
@@ -279,7 +292,7 @@
         <!-- w-100 寬度滿版 -->
         <nav class="navbar navbar-expand-sm navbar-light  fixed-top w-100" style="background-color:rgb(251, 160, 108);">
             <div class="container-fluid">
-                <!-- 品牌 -->
+                <!-- logo -->
                 <a class="navbar-brand" href="#">
 
                 </a>
@@ -339,10 +352,10 @@
 
             </div>
         </div>
-        <hr class="featurette-divider">
+        <!-- <hr class="featurette-divider"> -->
 
         <!-- 關於安怡 -->
-        <div class="vh-75 mt-5 mb-5 mt-5">
+        <div class="vh-75 mb-5 mt-2 background">
             <div class="about" id="about">
                 <div class="row">
                     <div class="col-sm-7 text-center mb-4 mt-5">
@@ -350,14 +363,14 @@
                             <img src="image/medal.png" alt="" style="width: 40px;margin-right:10px">
                             關於安怡
                         </h2>
-                        <hr class="mx-auto" style="width: 25%; border-top: 2px solid #999;">
+                        <hr class="mx-auto" style="width: 35%; border-top: 2px solid #999;">
                         <div class="lh-lg text-wrap p-3">
                             <p>
                                 新北市私立安怡老人長期照顧中心，位於中和區建一路上，
-                                距離環狀線捷運橋和站，走路只要7分鐘的路程，交通十分便利!
+                                距離環狀線捷運橋和站，走路只要7分鐘，交通十分便利!
                             </p>
                             <p>
-                                機構內環境乾淨明亮、通風良好，鬧中取靜!房間/客廳活動空間寬敞舒適，十分適合長輩居住，資歷豐富的護理/照顧人員，專業的服務，細心的照顧，讓家屬可以放心地將親人交給安怡!
+                                機構內環境乾淨明亮、通風良好，鬧中取靜！房間及客廳的活動空間寬敞舒適，十分適合長輩居住，資歷豐富的護理/照顧人員，專業的服務，細心的照顧，讓家屬可以放心地將親人交給安怡！
                             </p>
                         </div>
                     </div>
@@ -369,7 +382,8 @@
 
             </div>
         </div>
-        <hr class="featurette-divider">
+        <!-- <hr class="featurette-divider"> -->
+
         <!-- 服務項目 item -->
         <div class="vh-75">
             <div class="item" id="item">
@@ -378,7 +392,7 @@
                         <img src="image/takecare.png" alt="" style="width: 40px;margin-right:10px">
                         服務項目
                     </h2>
-                    <hr class="mx-auto" style="width: 25%; border-top: 2px solid #999;">
+                    <hr class="mx-auto" style="width: 35%; border-top: 2px solid #999;">
                     <div class="container mt-3">
 
                         <table class="table table-hover text-center mt-5">
@@ -449,10 +463,10 @@
                 </div>
             </div>
         </div>
-        <hr class="featurette-divider">
+        <!-- <hr class="featurette-divider"> -->
 
         <!-- 收費方式 fee -->
-        <div class="vh-75">
+        <div class="vh-75 background">
             <div class="fee" id="fee">
                 <div class="contact mb-5 mt-5" id="fee">
                     <div class="row">
@@ -461,11 +475,10 @@
                             <h2 class="fw-bold mt-5">
                                 <img src="image/fee.png" alt="" style="width: 40px;margin-right:10px">收費方式
                             </h2>
-                            <hr class="mx-auto" style="width: 25%; border-top: 2px solid #999;">
+                            <hr class="mx-auto" style="width: 35%; border-top: 2px solid #999;">
                             <div class="container">
-                                <table class="table table-hover text-center mt-5">
+                                <table class="text-center mt-5 feeTable">
                                     <thead>
-
                                         <tr>
                                             <th>四人房</th>
                                             <th>六人房</th>
@@ -480,7 +493,7 @@
                                 </table>
                                 <div class="text-start p-2">
                                     <br>
-                                    <table>
+                                    <table style="margin:auto;">
                                         <tr>
                                             <td style="vertical-align:top;">
                                                 ※
@@ -506,7 +519,7 @@
                 </div>
             </div>
         </div>
-        <hr class="featurette-divider">
+        <!-- <hr class="featurette-divider"> -->
 
         <!-- 入住須知 intro-->
         <div class="vh-75 mt-5 mb-5 mt-5">
@@ -517,7 +530,7 @@
                             <img src="image/home.png" alt="" style="width: 40px;margin-right:10px">
                             入住須知
                         </h2>
-                        <hr class="mx-auto" style="width: 25%; border-top: 2px solid #999;">
+                        <hr class="mx-auto" style="width: 35%; border-top: 2px solid #999;">
                         <div class="p-3">
                             <table style="margin:auto">
                                 <tr>
@@ -577,26 +590,37 @@
                 </table>
             </div>
         </div>
-        <hr class="featurette-divider">
+        <!-- <hr class="featurette-divider"> -->
         <!-- 聯絡我們 contact -->
-        <div class="vh-75">
+        <div class="vh-75 background pt-2">
             <div class="contact" id="contact">
-                <div class="text-center mb-4">
-                    <h2 class="fw-bold mt-5">
+                <div class="text-center">
+                    <h2 class="fw-bold mt-3">
                         <img src="image/contact.png" alt="" style="width: 40px;margin-right:10px">
                         聯絡我們
                     </h2>
-                    <hr class="mx-auto mb-5" style="width: 25%; border-top: 2px solid #999;">
+                    <hr class="mx-auto mb-5" style="width: 35%; border-top: 2px solid #999;">
                     <div class="container">
                         <div class="row">
 
-                            <div class="col-sm-6 mb-4 mx-auto text-start p-5">
+                            <div class="col-sm-6 mb-4 mx-auto text-start p-3">
                                 <p class="fw-bold text-center">安怡老人長期照顧中心(養護型)</p>
                                 <hr>
-                                <div class="ps-5">
-                                    <p>地址：235新北市中和區建一路87號3樓</p>
-                                    <p>聯絡時間：週一~週日 10：00~20：00</p>
-                                    <p>連絡電話：（02）2228-7623</p>
+                                <div class="ps-3">
+                                    <table>
+                                        <tr>
+                                            <td>中心地址：</td>
+                                            <td>235新北市中和區建一路87號3樓</td>
+                                        </tr>
+                                        <tr>
+                                            <td>聯絡時間：</td>
+                                            <td>週一至週日 10:00~12:00、14:00~20:00</td>
+                                        </tr>
+                                        <tr>
+                                            <td>聯絡電話：</td>
+                                            <td>(02) 2228-7623</td>
+                                        </tr>
+                                    </table>
                                 </div>
                             </div>
 
